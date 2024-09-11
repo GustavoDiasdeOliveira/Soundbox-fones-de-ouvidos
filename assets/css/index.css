@@ -219,3 +219,150 @@ header{
 .row3:hover{
     transform: translateY(-8px);
 }
+
+/* Adicionar responsividade */
+@media (max-width: 768px) {
+    /* Ajustar header para mobile */
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5%;
+    }
+
+    .logo {
+        font-size: 33px;
+    }
+
+    /* Ocultar a navegação padrão e usar menu lateral */
+    .navegação {
+        display: none;
+    }
+
+    /* Ajustar o ícone de menu */
+    #menu {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    /* Estilizar o menu lateral */
+    .menu-lateral {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: #1d2631;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .menu-lateral ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .menu-lateral ul li {
+        margin: 15px 0;
+    }
+
+    .menu-lateral ul li a {
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .menu-lateral ul li a:hover {
+        color: var(--main-color);
+    }
+
+    .menu-lateral.active {
+        left: 0;
+    }
+}
+
+/* Ajustar o layout da seção home */
+@media (max-width: 768px) {
+    .home {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    .home-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-text h3 {
+        font-size: 2.5rem;
+    }
+
+    .btn {
+        padding: 20px 80px;
+        font-size: 14px;
+        margin: 20px;
+    }
+
+    .main {
+        flex-direction: row;
+        gap: 1rem;
+        left: 20%;
+        margin: 80px auto;
+    }
+}
+
+/* Estilizar o menu lateral */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #1d2631;
+    transition: .3s;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu-lateral ul li {
+    margin: 15px 0;
+}
+
+.menu-lateral ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.menu-lateral ul li a:hover {
+    color: var(--main-color);
+}
+
+.menu-lateral.active {
+    left: 0;
+}
+
+/* Ajustar o ícone de menu */
+#menu {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+}
